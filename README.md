@@ -2198,13 +2198,13 @@ Push code to GitHub:
 
 \### Register Page
 
-!\[Register](screenshots/register.jpeg)
+!\[Register](./screenshots/register.jpeg)
 
 
 
 \### Login Page
 
-!\[Login](screenshots/login.jpeg)
+!\[Login](./screenshots/login.jpeg)
 
 
 
@@ -2263,6 +2263,10 @@ s
 \###Update Action Item
 
 !\[Update Action Item](screenshots/UpdateActionItem.jpeg)
+
+
+
+!\[Action Item](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/ActionItem.jpeg)
 
 
 
