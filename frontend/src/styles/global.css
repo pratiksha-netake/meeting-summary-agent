@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #090b22;
+
+    color: white;
+
+    min-height: 100vh;
+
+}
+
+
+
+a {
+
+    color: #c084fc;
+
+    text-decoration: none;
+
+}
+
+
+
+a:hover {
+
+    color: #f472b6;
+
+}
+
+
+
+
+input,
+select,
+textarea {
+
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 10px 0;
+
+
+    border-radius: 10px;
+
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+
+    background: rgba(255,255,255,0.08);
+
+
+    color: white;
+
+
+    outline: none;
+
+
+}
+
+
+
+
+
+input::placeholder {
+
+    color: #b9b9d8;
+
+}
+
+
+
+
+
+button {
+
+
+    cursor: pointer;
+
+
+    border: none;
+
+
+}
+
+
+
+
+
+.gradient-btn {
+
+
+    margin-top: 15px;
+
+
+    padding: 14px 30px;
+
+
+    border-radius: 30px;
+
+
+    color: white;
+
+
+    font-size: 16px;
+
+
+    font-weight: bold;
+
+
+    background: linear-gradient(
+
+        135deg,
+
+        #7b2ff7,
+
+        #f107a3
+
+    );
+
+
+    transition: 0.3s;
+
+
+}
+
+
+
+
+.gradient-btn:hover {
+
+
+    transform: translateY(-3px);
+
+
+    opacity: 0.9;
+
+
+}
+
+
+
+
+
+.gradient-btn:disabled {
+
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+
+}
+
+
+
+
+
+.message {
+
+
+    margin-top: 15px;
+
+
+    color: #86efac;
+
+
+}
+
+
+
+.error {
+
+
+    color: #f87171;
+
+    margin: 10px 0;
+
+}
+
+
+
+
+
+.loader-container {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+
+.loader-circle {
+
+
+    width:40px;
+
+
+    height:40px;
+
+
+    border-radius:50%;
+
+
+    border:5px solid rgba(255,255,255,0.2);
+
+
+    border-top:5px solid white;
+
+
+    animation:spin 1s linear infinite;
+
+
+}
+
+
+
+
+@keyframes spin {
+
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+
+}
