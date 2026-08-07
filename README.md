@@ -2190,89 +2190,115 @@ Push code to GitHub:
 
 
 
-
-
 \## Application Screenshots
 
 
 
 \### Register Page
 
-!\[Register](./screenshots/register.jpeg)
+
+
+!\[Register Page](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/register.jpeg)
+
+
 
 
 
 \### Login Page
 
-!\[Login](./screenshots/login.jpeg)
+
+
+!\[Login Page](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/login.jpeg)
+
+
 
 
 
 \### HomePage
 
-!\[HomePage](screenshots/HomePage.jpeg)
-
-!\[HomePage](screenshots/HomePage.jpeg)
 
 
-
-\###Transcript Upload
-
-!\[Transcript Upload](screenshots/UploadFile.jpeg)
-
-
-
-\###Mannual Add Meetings
-
-!\[ManualMeetings](screenshots/ManualMeetings.jpeg)
-
-
-
-\###History Meeting
-
-!\[History Meetings](screenshots/History.jpeg)
-
-
-
-\###Summary Generation
-
-!\[Login](screenshots/Summary.jpeg)
-
-
-
-\###Search Meeting
-
-!\[Search Meeting](screenshots/Search.jpeg)
-
-s
-
-\###AssignItem
-
-!\[AssignItem](screenshots/ActionItem.jpeg)
-
-
-
-\###AssignItem
-
-!\[AssignItem](screenshots/AssignItem.jpeg)
-
-!\[updateStatus](screenshots/updateStatus.jpeg)
-
-
-
-\###Update Action Item
-
-!\[Update Action Item](screenshots/UpdateActionItem.jpeg)
-
-
-
-!\[Action Item](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/ActionItem.jpeg)
+!\[HomePage](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/HomePage.jpeg)
 
 
 
 
 
+\### Transcript Upload
 
+
+
+!\[Transcript Upload](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/UploadFile.jpeg)
+
+
+
+
+
+\### Manual Add Meetings
+
+
+
+!\[Manual Meetings](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/ManualMeetings.jpeg)
+
+
+
+
+
+\### History Meeting
+
+
+
+!\[History Meeting](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/History.jpeg)
+
+
+
+
+
+\### Summary Generation
+
+
+
+!\[Summary Generation](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/Summary.jpeg)
+
+
+
+
+
+\### Search Meeting
+
+
+
+!\[Search Meeting](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/Search.jpeg)
+
+
+
+
+
+\### Assign Action Item
+
+
+
+!\[Assign Action Item](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/ActionItem.jpeg)
+
+
+
+
+
+\### Assign Item
+
+
+
+!\[Assign Item](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/AssignItem.jpeg)
+
+
+
+
+
+\### Update Action Item
+
+
+
+!\[Update Action Item](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/UpdateActionItem.jpeg)
 
 
 
