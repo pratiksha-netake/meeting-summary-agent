@@ -1,5 +1,10 @@
 package com.meetingsummary.meeting_summary_agent.exception;
 
-public class ResourceNotFoundException {
+public class ResourceNotFoundException extends RuntimeException {
+	
+	public ResourceNotFoundException(String message) {
+		
+		super(message);
+	}
 
 }

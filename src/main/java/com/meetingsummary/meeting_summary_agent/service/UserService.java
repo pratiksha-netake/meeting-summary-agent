@@ -39,16 +39,12 @@ public class UserService {
 		
 		user.setFullName(request.getFullName());
 		user.setEmail(request.getEmail());
-		
-		user.setPassword(passwordEncoder.encode(request.getPassword()));
-		
+		user.setPassword(passwordEncoder.encode(request.getPassword()));		
 		userRepository.save(user);
-		
 		return " User Registered Successfully ";
 	}
 	
 	public JwtResponse login(LoginRequest request) {
-		
 		authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
 				request.getEmail(),
 				request.getPassword()
@@ -56,14 +52,11 @@ public class UserService {
 				);
 		
 		String token= jwtUtil.generateToken(request.getEmail());
-		
 		return new JwtResponse(
 				token,
 				"Login Successful"
 				);
 	}
-	
-	
 
 }
 

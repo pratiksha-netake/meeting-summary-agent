@@ -19,7 +19,7 @@ public class ActionItem {
 
     @ManyToOne
     @JoinColumn(name="meeting_id")
-    private MeetingNotes meeting;
+    private Meeting meeting;
 
 
 
@@ -52,7 +52,7 @@ public class ActionItem {
 
 
     public ActionItem(
-            MeetingNotes meeting,
+    		Meeting meeting,
             String task,
             String assignedTo
     ){
@@ -83,7 +83,7 @@ public class ActionItem {
 
 
 
-    public MeetingNotes getMeeting(){
+    public Meeting getMeeting(){
 
         return meeting;
 

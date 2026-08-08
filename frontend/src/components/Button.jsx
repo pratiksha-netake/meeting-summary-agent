@@ -1,6 +1,5 @@
 import "../styles/global.css";
 
-
 function Button({
     children,
     type = "button",
@@ -8,30 +7,16 @@ function Button({
     disabled = false,
     className = ""
 }) {
-
-
     return (
-
         <button
-
             type={type}
-
             onClick={onClick}
-
             disabled={disabled}
-
             className={`gradient-btn ${className}`}
 
         >
-
             {children}
-
         </button>
-
     );
-
-
 }
-
-
 export default Button;

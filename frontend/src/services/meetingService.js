@@ -1,178 +1,162 @@
 import API from "../api/axiosConfig";
 
+// =====================================================
+// CREATE MEETING
+// =====================================================
+
+const createMeeting = async (meetingData) => {
+
+    const response = await API.post(
+        "/api/meetings",
+        meetingData
+    );
+
+    return response.data;
+};
 
 
-// Upload transcript file
+// =====================================================
+// ADD MANUAL MEETING
+// =====================================================
+
+const addMeeting = async (meetingData) => {
+
+    const response = await API.post(
+        "/api/meetings/add",
+        meetingData
+    );
+
+    return response.data;
+};
+
+
+// =====================================================
+// GET MEETING BY ID
+// =====================================================
+
+const getMeeting = async (id) => {
+
+    const response = await API.get(
+        `/api/meetings/${id}`
+    );
+
+    return response.data;
+};
+
+
+// =====================================================
+// VIEW MEETING
+// Used by ViewMeeting.jsx
+// =====================================================
+
+const viewMeeting = async (id) => {
+
+    const response = await API.get(
+        `/api/meetings/view/${id}`
+    );
+
+    return response.data;
+};
+
+
+// =====================================================
+// UPLOAD TRANSCRIPT
+// =====================================================
+
 const uploadTranscript = async (file) => {
-
 
     const formData = new FormData();
 
-
-    formData.append(
-        "file",
-        file
-    );
-
-
+    formData.append("file", file);
 
     const response = await API.post(
-
-        "/api/transcripts/upload",
-
+        "/api/meetings/upload",
         formData,
-
         {
-            headers:{
-                "Content-Type":"multipart/form-data"
+            headers: {
+                "Content-Type": "multipart/form-data"
             }
         }
-
     );
 
-
     return response.data;
-
 };
 
 
+// =====================================================
+// MEETING HISTORY
+// =====================================================
 
-
-
-
-// Add meeting notes
-const addNotes = async (notesData)=>{
-
-
-    const response = await API.post(
-
-        "/api/notes/add",
-
-        notesData
-
-    );
-
-
-    return response.data;
-
-};
-
-
-
-
-
-
-// Get old meeting history
-const getMeetingHistory = async ()=>{
-
+const getHistory = async () => {
 
     const response = await API.get(
-
-        "/api/notes/history"
-
+        "/api/meetings/history"
     );
 
-
     return response.data;
-
 };
 
 
+// =====================================================
+// SEARCH MEETINGS
+// =====================================================
 
-
-
-
-// Get combined history
-// Notes + Transcript in one table
-const getCombinedHistory = async()=>{
-
+const searchMeetings = async (keyword) => {
 
     const response = await API.get(
-
-        "/api/notes/combined-history"
-
-    );
-
-
-    return response.data;
-
-};
-
-
-
-
-
-
-
-// Search meetings
-const searchMeetings = async(keyword)=>{
-
-
-    const response = await API.get(
-
-        `/api/notes/search?keyword=${keyword}`
-
-    );
-
-
-    return response.data;
-
-};
-
-
-
-
-
-
-
-// Download PDF report
-const downloadReport = async(meetingId)=>{
-
-
-    const response = await API.get(
-
-        `/api/notes/download/${meetingId}`,
-
+        "/api/meetings/history",
         {
-            responseType:"blob"
+            params: {
+                keyword: keyword
+            }
         }
-
     );
 
-
     return response.data;
-
 };
 
 
+// =====================================================
+// DOWNLOAD MEETING PDF
+// Used by MeetingHistory.jsx
+// =====================================================
+
+const downloadReport = async (id) => {
+
+    const response = await API.get(
+        `/api/meetings/download/${id}`,
+        {
+            responseType: "blob"
+        }
+    );
+
+    return response.data;
+};
 
 
-
-
+// =====================================================
+// EXPORT ALL METHODS
+// =====================================================
 
 const meetingService = {
 
+    createMeeting,
+
+    addMeeting,
+
+    getMeeting,
+
+    viewMeeting,
 
     uploadTranscript,
 
-
-    addNotes,
-
-
-    getMeetingHistory,
-
-
-    getCombinedHistory,
-
+    getHistory,
 
     searchMeetings,
 
-
     downloadReport
 
-
 };
-
 
 
 export default meetingService;

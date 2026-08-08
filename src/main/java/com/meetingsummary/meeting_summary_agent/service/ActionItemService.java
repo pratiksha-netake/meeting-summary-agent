@@ -1,14 +1,17 @@
 package com.meetingsummary.meeting_summary_agent.service;
 
 
+
+
 import org.springframework.stereotype.Service;
 
 import com.meetingsummary.meeting_summary_agent.dao.ActionItemRepository;
-import com.meetingsummary.meeting_summary_agent.dao.MeetingNotesRepository;
+
 import com.meetingsummary.meeting_summary_agent.dto.ActionItemRequest;
 import com.meetingsummary.meeting_summary_agent.dto.ActionItemResponse;
 import com.meetingsummary.meeting_summary_agent.model.ActionItem;
-import com.meetingsummary.meeting_summary_agent.model.MeetingNotes;
+import com.meetingsummary.meeting_summary_agent.model.Meeting;
+
 
 
 
@@ -19,7 +22,7 @@ public class ActionItemService {
 
     private final ActionItemRepository actionItemRepository;
 
-    private final MeetingNotesRepository meetingNotesRepository;
+    private final MeetingService meetingService;
 
 
 
@@ -27,20 +30,14 @@ public class ActionItemService {
 
     public ActionItemService(
             ActionItemRepository actionItemRepository,
-            MeetingNotesRepository meetingNotesRepository
+            MeetingService meetingService
     ){
 
         this.actionItemRepository = actionItemRepository;
 
-        this.meetingNotesRepository = meetingNotesRepository;
+        this.meetingService = meetingService;
 
     }
-
-
-
-
-
-
 
 
     public ActionItemResponse createActionItem(
@@ -50,22 +47,17 @@ public class ActionItemService {
 
         // Find meeting
 
-        MeetingNotes meeting =
-                meetingNotesRepository.findById(
+        Meeting meeting =
+        		meetingService.getMeeting(
                         request.getMeetingId()
-                )
-                .orElseThrow(() ->
-                        new RuntimeException(
-                                "Meeting not found"
-                        )
                 );
+                
 
 
 
 
 
-
-        // Create Action Item
+      
 
         ActionItem actionItem =
                 new ActionItem(
@@ -78,22 +70,10 @@ public class ActionItemService {
 
                 );
 
-
-
-
-
-
-        // Save
+       
 
         ActionItem saved =
                 actionItemRepository.save(actionItem);
-
-
-
-
-
-
-
 
         return new ActionItemResponse(
 
@@ -112,13 +92,6 @@ public class ActionItemService {
     }
 
 
-
-
-
-
-
-
-
     public ActionItemResponse updateStatus(
             Long id,
             String status
@@ -135,22 +108,10 @@ public class ActionItemService {
                 );
 
 
-
-
-
         actionItem.setStatus(status);
-
-
-
-
 
         ActionItem updated =
                 actionItemRepository.save(actionItem);
-
-
-
-
-
 
 
         return new ActionItemResponse(

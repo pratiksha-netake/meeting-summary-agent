@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import GlassCard from "../components/GlassCard";
@@ -9,309 +10,119 @@ import meetingService from "../services/meetingService";
 
 import "../styles/dashboard.css";
 
-
-
-function Meeting(){
-
-
-    const [formData,setFormData] = useState({
-
-        meetingTitle:"",
-
-        notes:""
-
+function Meeting() {
+    const navigate = useNavigate();
+    const [formData, setFormData] = useState({
+        meetingTitle: "",
+        notes: ""
     });
-
-
-
-    const [message,setMessage] = useState("");
-
-    const [loading,setLoading] = useState(false);
-
-
-
-
-
-
-
-    const handleChange = (e)=>{
-
-
+    const [message, setMessage] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [savedMeetingId, setSavedMeetingId] = useState(null);
+    const handleChange = (e) => {
         setFormData({
-
             ...formData,
-
-            [e.target.name]:e.target.value
-
+         [e.target.name]: e.target.value
         });
-
-
     };
-
-
-
-
-
-
-
-    const saveMeetingNotes = async(e)=>{
-
-
+    const saveMeetingNotes = async (e) => {
         e.preventDefault();
-
-
-
-        try{
-
-
+        if (!formData.meetingTitle.trim()) {
+            setMessage("Please enter a meeting title");
+            return;
+        }
+        if (!formData.notes.trim()) {
+            setMessage("Please enter meeting notes");
+            return;
+        }
+        try {
             setLoading(true);
-
-
             setMessage("");
-
-
-
-            const response = await meetingService.addNotes(
-                formData
-            );
-
-
-
-            console.log(response);
-
-
-
-            setMessage(
-                "Meeting notes saved successfully"
-            );
-
-
-
-            setFormData({
-
-                meetingTitle:"",
-
-                notes:""
-
+            setSavedMeetingId(null);
+            const response = await meetingService.addMeeting({
+                title: formData.meetingTitle,
+                content: formData.notes
             });
-
-
-        }
-
-
-        catch(error){
-
-
+            console.log("Saved meeting:", response);
+            setSavedMeetingId(response.id);
+            setMessage("Meeting notes saved successfully");
+            setFormData({
+                meetingTitle: "",
+                notes: ""
+            });
+        } catch (error) {
             console.log(error);
-
-
-
-            if(error.response){
-
+            if (error.response) {
                 setMessage(
-                    error.response.data.message ||
-                    "Failed to save notes"
+                    error.response.data?.message ||
+                  "Failed to save notes"
                 );
-
+            } else {
+                setMessage("Server not reachable");
             }
-
-            else{
-
-                setMessage(
-                    "Server not reachable"
-                );
-
-            }
-
-
-        }
-
-
-        finally{
-
-
+        } finally {
             setLoading(false);
-
-
         }
-
-
     };
-
-
-
-
-
-
-
-
+    const viewMeeting = () => {
+        if (savedMeetingId) {
+            navigate(`/meeting/${savedMeetingId}`);
+        }
+    };
     return (
-
-
         <div className="dashboard-page">
-
-
-
             <Navbar />
-
-
-
-
             <div className="dashboard-container">
-
-
-
                 <GlassCard>
-
-
-
                     <h1>
-
                         Enter Meeting Notes
-
                     </h1>
 
-
-
                     <p>
-
-
-                        Add your meeting details manually
-
-                        without uploading a transcript.
-
-
+                        Add your meeting details
                     </p>
-
-
-
-
-
-
                     <form onSubmit={saveMeetingNotes}>
-
-
                         <input
-
-
                             type="text"
-
-
                             name="meetingTitle"
-
-
                             placeholder="Meeting Title"
-
-
                             value={formData.meetingTitle}
-
-
-                            onChange={handleChange}
-
-
+                          onChange={handleChange}
                         />
-
-
-
-
-
-
                         <textarea
-
-
                             name="notes"
-
-
                             placeholder="Enter meeting notes"
-
-
                             rows="8"
-
-
                             value={formData.notes}
-
-
                             onChange={handleChange}
-
-
                         />
-
-
-
-
-
-
-
                         {
-
-
-                        loading ?
-
-
-                        <Loader text="Saving notes..." />
-
-
-                        :
-
-
-                        <Button type="submit">
-
-
-                            Save Meeting Notes
-
-
-                        </Button>
-
-
+                            loading
+                                ?
+                                <Loader text="Saving notes..." />
+                                :
+                                <Button type="submit">
+                                    Save Meeting Notes
+                                </Button>
                         }
-
-
-
                     </form>
-
-
-
-
-
-
-
                     {
-
-
-                    message &&
-
-
-                    <p className="message">
-
-
-                        {message}
-
-
-                    </p>
-
-
+                        message &&
+                        <p className="message">
+                            {message}
+                        </p>
                     }
-
-
-
+                    {
+                        savedMeetingId &&
+                        <div style={{ marginTop: "20px" }}>
+                            <Button onClick={viewMeeting}>
+                                View Meeting
+                            </Button>
+                       </div>
+                    }
                 </GlassCard>
-
-
-
-
             </div>
-
-
-
         </div>
-
-
-
     );
-
-
 }
-
-
-
 export default Meeting;

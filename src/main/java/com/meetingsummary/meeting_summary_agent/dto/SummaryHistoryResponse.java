@@ -2,24 +2,33 @@ package com.meetingsummary.meeting_summary_agent.dto;
 
 import java.time.LocalDateTime;
 
-public class SummaryResponse {
+public class SummaryHistoryResponse {
 
-    private Long id;
+    private Long summaryId;
+    private Long meetingId;
+    private String title;
+    private String type;
     private String summary;
     private String discussionPoints;
     private String decisions;
     private String actionItems;
     private LocalDateTime createdAt;
 
-    public SummaryResponse(
-            Long id,
+    public SummaryHistoryResponse(
+            Long summaryId,
+            Long meetingId,
+            String title,
+            String type,
             String summary,
             String discussionPoints,
             String decisions,
             String actionItems,
             LocalDateTime createdAt) {
 
-        this.id = id;
+        this.summaryId = summaryId;
+        this.meetingId = meetingId;
+        this.title = title;
+        this.type = type;
         this.summary = summary;
         this.discussionPoints = discussionPoints;
         this.decisions = decisions;
@@ -27,8 +36,20 @@ public class SummaryResponse {
         this.createdAt = createdAt;
     }
 
-    public Long getId() {
-        return id;
+    public Long getSummaryId() {
+        return summaryId;
+    }
+
+    public Long getMeetingId() {
+        return meetingId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public String getSummary() {

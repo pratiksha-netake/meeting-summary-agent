@@ -2,54 +2,79 @@
 
 ## Project Overview
 
-The Meeting Summary Agent is a full-stack web application that helps users manage meeting transcripts and notes, generate summaries, track action items, and view meeting statistics.
+The Meeting Summary Agent is a full-stack web application using AI that helps users manage meeting transcripts and notes, generate summaries, track action items, and view meeting statistics.
 
 ## Features
 
 ### User Registration and Login
 Users can create an account and securely log in to access the application.
 
+
 ### Upload Meeting Transcript
 Users can upload meeting transcripts in TXT, DOCX, or PDF format for processing.
+
 
 ### Manual Meeting Notes
 Users can enter meeting title and notes manually without uploading a transcript.
 
+
 ### Meeting Summary
 The application generates a structured summary from the meeting content.
+
+
+### AI-Powered Meeting Summary
+The application uses Google Gemini AI to analyze meeting transcripts and notes and generate meaningful meeting summaries.
+
+The AI analyzes the meeting content and generates:
+- Meeting summary
+- Key discussion points
+- Important decisions
+- Action items
+
 
 ### Key Discussion Points
 Important topics and discussion points from the meeting are identified and presented to the user.
 
+
 ### Action Items
 The application identifies tasks that need to be completed after the meeting.
+
 
 ### Decisions
 Important decisions made during the meeting are extracted and displayed.
 
+
 ### Assign Action Items
 Action items can be assigned to team members and their status can be updated.
+
 
 ### Search and Filter
 Users can search meeting records to quickly find specific meetings.
 
+
 ### Meeting History
 Users can view previously created meetings and access their meeting information and summaries.
+
 
 ### Download Report
 Users can download the meeting summary as a PDF report.
 
+
 ### Dashboard Statistics
 The dashboard displays meeting-related statistics to provide an overview of the user's meetings.
+
 
 ### Responsive User Interface
 The application provides a responsive interface that works across different screen sizes.
 
+
 ### RESTful APIs
 The backend provides RESTful APIs built with Spring Boot for communication between the frontend and backend.
 
+
 ### MySQL Database
 Meeting, user, summary, and action-item data are stored and managed using MySQL.
+
 
 ### Exception Handling and Validation
 The application uses input validation and custom exception handling to manage invalid requests and application errors.
@@ -61,6 +86,9 @@ The application uses input validation and custom exception handling to manage in
 
 ##Backend Technologies:
 
+
+-Google Gemini API
+-Gemini AI
 -Java
 -Spring Boot
 -Spring Web / Spring MVC
@@ -224,7 +252,7 @@ Open MySQL Workbench and connect to your MySQL Server.
 Create the database used by the application:
 
 ###3 Configure application.properties
-MySQL database configuration:url username 
+MySQL database configuration:url ,username,password,gemini.api.key=${GEMINI_API_KEY} 
 
 ###4. Start the Backend
 ###5 . Verify the Database
@@ -262,6 +290,8 @@ MySQL database configuration:url username
 - `POST /api/summaries/generate/{meetingId}` — Generate meeting summary
 - `GET /api/summaries/download/{meetingId}` — Download summary PDF
 
+
+
 ## Application Screenshots
 
 ### Register Page
@@ -277,20 +307,30 @@ MySQL database configuration:url username
 ![Home Page](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/HomePage.jpeg?raw=true)
 
 ### Transcript Upload
-
 ![Transcript Upload](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/UploadFile.jpeg?raw=true)
+![Transcript Upload](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/UploadFile2.jpeg?raw=true)
+![Transcript Upload](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/ViewUploadedFile.jpeg?raw=true)
 
 ### Manual Add Meeting
 
-![Manual Add Meeting](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/ManualMeetings.jpeg?raw=true)
+![Manual Add Meeting](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/AddMeeting.jpeg?raw=true)
+![Manual Add Meeting](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/ViewMeeting.jpeg?raw=true)
 
 ### Meeting History
 
-![Meeting History](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/History.jpeg?raw=true)
+![Meeting History](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Hlstory.jpeg?raw=true)
+![Meeting History](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/History1.jpeg?raw=true)
+
 
 ### Summary Generation
 
 ![Summary Generation](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Summary.jpeg?raw=true)
+![Summary Generation](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Summary1.jpeg?raw=true)
+![Summary Generation](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Summary3.jpeg?raw=true)
+![Summary Generation](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Summary4.jpeg?raw=true)
+![Summary Generation](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Summary5.jpeg?raw=true)
+![Summary Generation](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Summary6.jpeg?raw=true)
+![Summary Generation](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/SummaryDownload.jpeg?raw=true)
 
 ### Search Meeting
 

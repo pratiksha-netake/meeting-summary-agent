@@ -1,8 +1,6 @@
 package com.meetingsummary.meeting_summary_agent.dto;
 
-
 public class DashboardStatisticsResponse {
-
 
     private long totalMeetings;
 
@@ -17,15 +15,13 @@ public class DashboardStatisticsResponse {
     private long recentMeetings;
 
 
-
     public DashboardStatisticsResponse(
             long totalMeetings,
             long totalSummaries,
             long totalActionItems,
             long pendingActions,
             long completedActions,
-            long recentMeetings
-    ){
+            long recentMeetings) {
 
         this.totalMeetings = totalMeetings;
         this.totalSummaries = totalSummaries;
@@ -33,38 +29,35 @@ public class DashboardStatisticsResponse {
         this.pendingActions = pendingActions;
         this.completedActions = completedActions;
         this.recentMeetings = recentMeetings;
-
     }
 
 
-
-    public long getTotalMeetings(){
+    public long getTotalMeetings() {
         return totalMeetings;
     }
 
 
-    public long getTotalSummaries(){
+    public long getTotalSummaries() {
         return totalSummaries;
     }
 
 
-    public long getTotalActionItems(){
+    public long getTotalActionItems() {
         return totalActionItems;
     }
 
 
-    public long getPendingActions(){
+    public long getPendingActions() {
         return pendingActions;
     }
 
 
-    public long getCompletedActions(){
+    public long getCompletedActions() {
         return completedActions;
     }
 
 
-    public long getRecentMeetings(){
+    public long getRecentMeetings() {
         return recentMeetings;
     }
-
 }
