@@ -173,11 +173,12 @@ Create the required backend packages and Java files.
 
 ### 6. Run the Backend
 
+### 6. Run the Backend
+
 Run the backend using:
 
 ```bash
 mvn spring-boot:run
-
 
 
 # Frontend Setup Instructions
