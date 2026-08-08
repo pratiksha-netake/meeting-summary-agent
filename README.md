@@ -1,4 +1,6 @@
-# Project Overview
+# Meeting Summary Agent
+
+## Project Overview
 
 The Meeting Summary Agent is a full-stack web application that helps users manage meeting transcripts and notes, generate summaries, track action items, and view meeting statistics.
 
@@ -57,70 +59,69 @@ The application uses input validation and custom exception handling to manage in
 # Technology Stack
 
 
-
 ##Backend Technologies:
 
-Java
-Spring Boot
-Spring Web / Spring MVC
-Spring Data JPA
-Hibernate ORM
-Spring Security
-JWT
-Jakarta Validation
-REST API
-Exception Handling
-Dependency Injection
+-Java
+-Spring Boot
+-Spring Web / Spring MVC
+-Spring Data JPA
+-Hibernate ORM
+-Spring Security
+-JWT
+-Jakarta Validation
+-REST API
+-Exception Handling
+-Dependency Injection
 
 
 ## Frontend Technologies
-React.js
-JavaScript
-React Router DOM
-Axios
-HTML
-CSS
+-React.js
+-JavaScript
+-React Router DOM
+-Axios
+-HTML
+-CSS
 
 ##Authentication and Security
-Spring Security
-Authentication
-Password hashing/encoding
-JWT
+-Spring Security
+-Authentication
+-Password hashing/encoding
+-JWT
 
 
 ## Database
 
-MySQL
-SQL
-MySQL Workbench
-MySQL Connector/J
-JDBC
+-MySQL
+-SQL
+-MySQL Workbench
+-MySQL Connector/J
+-JDBC
 
 
 
 ##Validation & Exception Handling
-Jakarta Bean Validation
-@Valid
-Custom Exceptions
-ResourceNotFoundException
-InvalidFileException
-Exception Handling
+-Jakarta Bean Validation
+-@Valid
+-Custom Exceptions
+-ResourceNotFoundException
+-InvalidFileException
+-Exception Handling
 
 ##File & Report Processing
-Multipart File Upload
-Spring MultipartFile
-TXT/PDF/DOC/DOCX file handling
-PDF Report Generation
-PDF File Download
+-Multipart File Upload
+-Spring MultipartFile
+-TXT/PDF/DOC/DOCX file handling
+-PDF Report Generation
+-PDF File Download
 
 ##Tools
-Git
-GitHub
-Maven
-Postman
-MySQL Workbench
-Eclipse
-VS Code
+-Git
+-GitHub
+-Maven
+-Postman
+-MySQL Workbench
+-Eclipse
+-VS Code
 
 
 
@@ -205,11 +206,12 @@ Install the required dependencies:
 ```bash
 npm install
 
-###5 Configure Backend API
+###5. Configure Backend API
 
-###6 run the frontend using npm run dev
+###6. run the frontend using npm run dev
 
 ###7. Test the Application
+
 
 
 ## Database Configuration
@@ -232,146 +234,84 @@ MySQL database configuration:url username
 ###5 . Verify the Database
 
 
-#API Endpoints
+# API Endpoints
 
-Authentication
-POST /auth/register
-POST /auth/login
+## Authentication
 
-Meetings
-POST /api/meetings
-GET /api/meetings/{id}
-POST /api/meetings/add
-POST /api/meetings/upload
-GET /api/meetings/history
-GET /api/meetings/view/{id}
-GET /api/meetings/download/{id}
+- `POST /auth/register` — Register a new user
+- `POST /auth/login` — User login
 
-Action Items
-POST /api/action-items/assign
-PUT /api/action-items/{id}/status
+## Meetings
 
+- `POST /api/meetings` — Create a meeting
+- `GET /api/meetings/{id}` — Get meeting by ID
+- `POST /api/meetings/add` — Add meeting manually
+- `POST /api/meetings/upload` — Upload meeting transcript
+- `GET /api/meetings/history` — Get meeting history
+- `GET /api/meetings/view/{id}` — View meeting details
+- `GET /api/meetings/download/{id}` — Download meeting PDF report
 
-Dashboard
-GET /api/dashboard/statistics
+## Action Items
 
-Summaries
-GET /api/summaries/test
-POST /api/summaries/generate/{meetingId}
-GET /api/summaries/download/{meetingId}
+- `POST /api/action-items/assign` — Assign an action item
+- `PUT /api/action-items/{id}/status` — Update action item status
 
+## Dashboard
 
+- `GET /api/dashboard/statistics` — Get dashboard statistics
 
-## Application Screenshots
+## Summaries
 
+- `GET /api/summaries/test` — Test summary API
+- `POST /api/summaries/generate/{meetingId}` — Generate meeting summary
+- `GET /api/summaries/download/{meetingId}` — Download summary PDF
 
 
-\### Register Page
+# Application Screenshots
 
+## Register Page
 
+![Register Page](screenshots/register.jpeg)
 
-!\[Register Page](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/register.jpeg)
+## Login Page
 
+![Login Page](screenshots/login.jpeg)
 
+## Home Page
 
+![Home Page](screenshots/HomePage.jpeg)
 
+## Transcript Upload
 
-\### Login Page
+![Transcript Upload](screenshots/UploadFile.jpeg)
 
+## Manual Add Meeting
 
+![Manual Meeting](screenshots/ManualMeetings.jpeg)
 
-!\[Login Page](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/login.jpeg)
+## Meeting History
 
+![Meeting History](screenshots/History.jpeg)
 
+## Summary Generation
 
+![Summary Generation](screenshots/Summary.jpeg)
 
+## Search Meeting
 
-\### HomePage
+![Search Meeting](screenshots/Search.jpeg)
 
+## Assign Action Item
 
+![Assign Action Item](screenshots/ActionItem.jpeg)
 
-!\[HomePage](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/HomePage.jpeg)
+## Assign Item
 
+![Assign Item](screenshots/AssignItem.jpeg)
 
+## Update Action Item
 
-
-
-\### Transcript Upload
-
-
-
-!\[Transcript Upload](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/UploadFile.jpeg)
-
-
-
-
-
-\### Manual Add Meetings
-
-
-
-!\[Manual Meetings](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/ManualMeetings.jpeg)
-
-
-
-
-
-\### History Meeting
-
-
-
-!\[History Meeting](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/History.jpeg)
-
-
-
-
-
-\### Summary Generation
-
-
-
-!\[Summary Generation](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/Summary.jpeg)
-
-
-
-
-
-\### Search Meeting
-
-
-
-!\[Search Meeting](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/Search.jpeg)
-
-
-
-
-
-\### Assign Action Item
-
-
-
-!\[Assign Action Item](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/ActionItem.jpeg)
-
-
-
-
-
-\### Assign Item
-
-
-
-!\[Assign Item](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/AssignItem.jpeg)
-
-
-
-
-
-\### Update Action Item
-
-
-
-!\[Update Action Item](https://raw.githubusercontent.com/pratiksha-netake/meeting-summary-agent/main/screenshots/UpdateActionItem.jpeg)
-
+![Update Action Item](screenshots/UpdateActionItem.jpeg)
 
 
 
