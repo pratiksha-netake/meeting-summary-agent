@@ -202,7 +202,7 @@ Open the React project in your preferred IDE.
 
 Install the required dependencies:
 
-```bash
+
 npm install
 
 ###5. Configure Backend API
