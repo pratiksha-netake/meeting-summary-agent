@@ -266,55 +266,51 @@ MySQL database configuration:url username
 - `POST /api/summaries/generate/{meetingId}` — Generate meeting summary
 - `GET /api/summaries/download/{meetingId}` — Download summary PDF
 
+## Application Screenshots
 
-# Application Screenshots
+### Register Page
 
-## Register Page
+![Register Page](./screenshots/register.jpeg)
 
-![Register Page](screenshots/register.jpeg)
+### Login Page
 
-## Login Page
+![Login Page](./screenshots/login.jpeg)
 
-![Login Page](screenshots/login.jpeg)
+### Home Page
 
-## Home Page
+![Home Page](./screenshots/HomePage.jpeg)
 
-![Home Page](screenshots/HomePage.jpeg)
+### Transcript Upload
 
-## Transcript Upload
+![Transcript Upload](./screenshots/UploadFile.jpeg)
 
-![Transcript Upload](screenshots/UploadFile.jpeg)
+### Manual Add Meeting
 
-## Manual Add Meeting
+![Manual Add Meeting](./screenshots/ManualMeetings.jpeg)
 
-![Manual Meeting](screenshots/ManualMeetings.jpeg)
+### Meeting History
 
-## Meeting History
+![Meeting History](./screenshots/History.jpeg)
 
-![Meeting History](screenshots/History.jpeg)
+### Summary Generation
 
-## Summary Generation
+![Summary Generation](./screenshots/Summary.jpeg)
 
-![Summary Generation](screenshots/Summary.jpeg)
+### Search Meeting
 
-## Search Meeting
+![Search Meeting](./screenshots/Search.jpeg)
 
-![Search Meeting](screenshots/Search.jpeg)
+### Action Item
 
-## Assign Action Item
+![Action Item](./screenshots/ActionItem.jpeg)
 
-![Assign Action Item](screenshots/ActionItem.jpeg)
+### Assign Item
 
-## Assign Item
+![Assign Item](./screenshots/AssignItem.jpeg)
 
-![Assign Item](screenshots/AssignItem.jpeg)
+### Update Action Item
 
-## Update Action Item
-
-![Update Action Item](screenshots/UpdateActionItem.jpeg)
-
-
-
+![Update Action Item](./screenshots/UpdateActionItem.jpeg)
 
 
 
