@@ -270,49 +270,47 @@ MySQL database configuration:url username
 
 ### Register Page
 
-![Register Page](./screenshots/register.jpeg)
+![Register Page](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/register.jpeg?raw=true)
 
 ### Login Page
 
-![Login Page](./screenshots/login.jpeg)
+![Login Page](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/login.jpeg?raw=true)
 
 ### Home Page
 
-![Home Page](./screenshots/HomePage.jpeg)
+![Home Page](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/HomePage.jpeg?raw=true)
 
 ### Transcript Upload
 
-![Transcript Upload](./screenshots/UploadFile.jpeg)
+![Transcript Upload](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/UploadFile.jpeg?raw=true)
 
 ### Manual Add Meeting
 
-![Manual Add Meeting](./screenshots/ManualMeetings.jpeg)
+![Manual Add Meeting](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/ManualMeetings.jpeg?raw=true)
 
 ### Meeting History
 
-![Meeting History](./screenshots/History.jpeg)
+![Meeting History](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/History.jpeg?raw=true)
 
 ### Summary Generation
 
-![Summary Generation](./screenshots/Summary.jpeg)
+![Summary Generation](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Summary.jpeg?raw=true)
 
 ### Search Meeting
 
-![Search Meeting](./screenshots/Search.jpeg)
+![Search Meeting](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Search.jpeg?raw=true)
 
 ### Action Item
 
-![Action Item](./screenshots/ActionItem.jpeg)
+![Action Item](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/ActionItem.jpeg?raw=true)
 
 ### Assign Item
 
-![Assign Item](./screenshots/AssignItem.jpeg)
+![Assign Item](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/AssignItem.jpeg?raw=true)
 
 ### Update Action Item
 
-![Update Action Item](./screenshots/UpdateActionItem.jpeg)
-
-
+![Update Action Item](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/UpdateActionItem.jpeg?raw=true)
 
 
 
