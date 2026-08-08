@@ -223,9 +223,6 @@ Open MySQL Workbench and connect to your MySQL Server.
 
 Create the database used by the application:
 
-```sql
-CREATE DATABASE meetingsummary_db;
-
 ###3 Configure application.properties
 MySQL database configuration:url username 
 
