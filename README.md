@@ -349,6 +349,13 @@ MySQL database configuration:url ,username,password,gemini.api.key=${GEMINI_API_
 ![Update Action Item](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/UpdateActionItem.jpeg?raw=true)
 
 
+###Dashboard
+![Dashboard](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Dashboard.jpeg?raw=true)
+![Dashboard](https://github.com/pratiksha-netake/meeting-summary-agent/blob/main/screenshots/Dashboard1.jpeg?raw=true)
+
+
+
+
 
 
 
